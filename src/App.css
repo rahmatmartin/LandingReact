@@ -1,0 +1,133 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  width: 40vmin;  /* Menyesuaikan logo dengan ukuran viewport yang lebih fleksibel */
+  height: auto;   /* Agar proporsi logo tetap terjaga */
+  pointer-events: none;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);  /* Responsif berdasarkan viewport */
+  color: white;
+  padding: 10px; /* Menambahkan sedikit ruang di sekitar konten */
+  box-sizing: border-box;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 768px (tablet atau ponsel dengan layar besar) */
+@media (max-width: 768px) {
+  .App-logo {
+    width: 30vmin;  /* Mengurangi ukuran logo untuk perangkat menengah */
+  }
+
+  .App-header {
+    font-size: calc(12px + 2vmin);  /* Mengatur ukuran font lebih besar dan mudah dibaca */
+    padding: 15px;  /* Ruang lebih banyak di sekitar header pada tablet */
+  }
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 480px (ponsel) */
+@media (max-width: 480px) {
+  .App-logo {
+    width: 25vmin;  /* Ukuran logo lebih kecil untuk ponsel */
+  }
+
+  .App-header {
+    font-size: calc(10px + 1.5vmin);  /* Ukuran font dioptimalisasi untuk ponsel */
+    padding: 20px;  /* Menambahkan lebih banyak ruang pada konten */
+  }
+}
+/* Gaya Umum untuk Navigasi */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #61dafb;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Responsif untuk menu di layar kecil */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #282c34;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu a {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #444;
+  }
+
+  .navbar-menu a:hover {
+    background-color: #61dafb;
+  }
+}
+
